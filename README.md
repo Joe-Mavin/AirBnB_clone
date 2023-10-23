@@ -1,57 +1,104 @@
+0x00. AirBnB clone - The console
+Group project
+Python
+OOP
+ By: Guillaume
+ Weight: 5
+ Project to be done in teams of 2 people (your team: Faith Migwi, Onyango Joseph Onyango)
+ Project will start Oct 9, 2023 6:00 AM, must end by Oct 16, 2023 6:00 AM
+ Checker was released at Oct 14, 2023 12:00 PM
+ Manual QA review must be done (request it when you are done with the project)
+ An auto review will be launched at the deadline
+Concepts
+For this project, we expect you to look at these concepts:
 
-<p align="center"><img src= "https://media.itsnicethat.com/original_images/563b97a87fa44cff9d001760.gif" width="600" height="400"/></p>
+Python packages
+AirBnB clone
 
 
-# AirBnB clone - The console :ab::rocket:
-The AirBnB clone project starts now until… the end of the first year. The goal of the project is to deploy on your server a simple copy of the AirBnB website. 
+Background Context
+Welcome to the AirBnB clone project!
+Before starting, please read the AirBnB concept page.
 
-*
+First step: Write a command interpreter to manage your AirBnB objects.
+This is the first step towards building your first full web application: the AirBnB clone. This first step is very important because you will use what you build during this project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
 
+Each task is linked and will help you to:
 
-## Table of contents :clipboard:
+put in place a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of your future instances
+create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file
+create all classes used for AirBnB (User, State, City, Place…) that inherit from BaseModel
+create the first abstracted storage engine of the project: File storage.
+create all unittests to validate all our classes and storage engine
+What’s a command interpreter?
+Do you remember the Shell? It’s exactly the same but limited to a specific use-case. In our case, we want to be able to manage the objects of our project:
 
- - [Description](https://github.com/robpalacios1/AirBnB_clone/#description-triangular_ruler)
- - [Installation](https://github.com/robpalacios1/AirBnB_clone/#installation-floppy_disk)
- - [File description](https://github.com/robpalacios1/AirBnB_clone/blob/master/README.md#file-description-file_folder)
- - [Example](https://github.com/robpalacios1/AirBnB_clone#example-computer)
- - [Contributors](https://github.com/robpalacios1/AirBnB_clone#contributors)
+Create a new object (ex: a new User or a new Place)
+Retrieve an object from a file, a database etc…
+Do operations on objects (count, compute stats, etc…)
+Update attributes of an object
+Destroy an object
+Resources
+Read or watch:
 
-## Description :triangular_ruler:
+cmd module
+cmd module in depth
+packages concept page
+uuid module
+datetime
+unittest module
+args/kwargs
+Python test cheatsheet
+cmd module wiki page
+python unittest
+Learning Objectives
+At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-The console is the first segment of the `AirBnB project` at `Holberton School` that will collectively cover fundamental concepts of higher level programming. The goal of `AirBnB project` is to eventually deploy our server a simple copy of the `AirBnB Website(HBnB)`. A command interpreter is created in this segment to manage objects for the `AirBnB(HBnB) website.`
-
-This is the first step towards building our first full web application: the AirBnB clone.
-
-A command interpreter to manage our Airbnb clone objects:
-
-- Create a new object (ex: a new User or a new Place)
-- Retrieve an object from a file, a database etc…
-- Do operations on objects (count, compute stats, etc…)
-- Update attributes of an object
-- Destroy an object
-
-<p align="center">
-<img src = "https://i.imgur.com/ROvfVRP.png"/>
- </p>
-
-## Installation :floppy_disk:
- - Clone this repository: `git clone "https://github.com/robpalacios1/AirBnB_clone.git"`
- - Access AirBnb directory: `cd AirBnB_clone`
- - Run hbnb(interactively): `./console` and enter command
- - Run hbnb(non-interactively): `echo "<command>" | ./console.py`
- 
-## File description :file_folder: 
-
-```
-AUTHORS     /models    test_base_model_dict.py    test_base_model.py    README.md    test_save_reload_base_model.py  
-
-```
-
-## Example :computer:
-
-<p align="center"> 
-<img src = "https://i.imgur.com/c5lYRnU.png"/>
-<img src = "https://i.imgur.com/9oWdkPQ.png"/>
-</p>
-
- 
+General
+How to create a Python package
+How to create a command interpreter in Python using the cmd module
+What is Unit testing and how to implement it in a large project
+How to serialize and deserialize a Class
+How to write and read a JSON file
+How to manage datetime
+What is an UUID
+What is *args and how to use it
+What is **kwargs and how to use it
+How to handle named arguments in a function
+Copyright - Plagiarism
+You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
+You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
+You are not allowed to publish any content of this project.
+Any form of plagiarism is strictly forbidden and will result in removal from the program.
+Requirements
+Python Scripts
+Allowed editors: vi, vim, emacs
+All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+All your files should end with a new line
+The first line of all your files should be exactly #!/usr/bin/python3
+A README.md file, at the root of the folder of the project, is mandatory
+Your code should use the pycodestyle (version 2.8.*)
+All your files must be executable
+The length of your files will be tested using wc
+All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
+All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+Python Unit Tests
+Allowed editors: vi, vim, emacs
+All your files should end with a new line
+All your test files should be inside a folder tests
+You have to use the unittest module
+All your test files should be python files (extension: .py)
+All your test files and folders should start by test_
+Your file organization in the tests folder should be the same as your project
+e.g., For models/base_model.py, unit tests must be in: tests/test_models/test_base_model.py
+e.g., For models/user.py, unit tests must be in: tests/test_models/test_user.py
+All your tests should be executed by using this command: python3 -m unittest discover tests
+You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base_model.py
+All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
+All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+We strongly encourage you to work together on test cases, so that you don’t miss any edge case
+GitHub
+There should be one project repository per group. If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score. 
